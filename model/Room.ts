@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
-import RoomType from "./Roomtype"; // Assuming 'Roomtype' is the correct name of the model
+import RoomType from "./Roomtype"; 
 
 interface IRoomType extends Document {
     name: string;
@@ -15,7 +15,7 @@ const roomSchema = new Schema<IRoomType>({
     },
     roomType: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: RoomType, // Ensure this matches the actual model name
+        ref: RoomType, 
         required: true
     },
     description: {
