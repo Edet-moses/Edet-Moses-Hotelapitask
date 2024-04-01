@@ -11,6 +11,10 @@ const verify_jwt_1 = require("../middlewares/verify.jwt");
 const user_registration_1 = require("../controllers/user.registration");
 const user_registration_2 = require("../controllers/user.registration");
 const router = express_1.default.Router();
+
+router.get('/', (req, res) => {
+    res.send("Salut, bienvenue dans mon hotel ");
+});
 router.post('/api/v1/signup', user_registration_1.signup); // User signup
 router.post('/api/v1/login', user_registration_1.login); // User login
 router.patch('/api/v1/forgotpassword', user_registration_2.forgotPassword);
