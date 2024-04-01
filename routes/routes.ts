@@ -9,9 +9,7 @@ import {forgotPassword,deleteUsers} from '../controllers/user.registration';
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-  res.send('bonjour')
-})
+
 
 router.post('/api/v1/signup', signup); // User signup
 router.post('/api/v1/login', login); // User login
